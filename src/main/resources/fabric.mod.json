@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "picolasclient",
+  "version": "${version}",
+  "name": "Picolas Client",
+  "description": "Picolas Client - Premium Meteor addon with PvP, ESP and Automation modules",
+  "authors": [
+    "Picolas"
+  ],
+  "contact": {
+    "homepage": "https://picolasclient.com",
+    "repo": "https://github.com/picolas/picolasclient",
+    "discord": "https://discord.gg/picolasclient"
+  },
+  "license": "All Rights Reserved",
+  "icon": "assets/picolasclient/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.picolas.client.PicolasClientAddon"
+    ],
+    "mixinsquared": [
+      "com.picolas.client.mixin.MeteorMixinCanceller"
+    ]
+  },
+  "mixins": [
+    "mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "57,255,20",
+    "modmenu": {
+      "links": {
+        "modmenu.website": "https://picolasclient.com",
+        "modmenu.discord": "https://discord.gg/picolasclient"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ["${mc_version}"],
+    "meteor-client": "*"
+  }
+}
